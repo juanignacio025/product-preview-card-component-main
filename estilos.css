@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+:root{
+    --colorFondoPagina: hsl(30, 38%, 92%);
+    --colorFondoTextos:hsl(0, 0%, 100%);
+    --colorTextoDescripcion: hsl(228, 12%, 48%);
+    --colorEnfasis: hsl(158, 36%, 37%);
+    --colorTextoTitulo: hsl(212, 21%, 14%);
+}
+/* Estilos generales */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor{
+    display:flex;
+    background-color: var(--colorFondoPagina);
+    min-height: 100vh;
+    align-items: flex-start;
+    justify-content: center;
+}
+/* Estilos para mobile */
+.tarjeta{
+    width: 21rem;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    font-family: 'Montserrat',sans-serif;
+    font-size: 14px;
+}
+/* Estilos de la imagen -m */
+.img-mobile{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-bottom: 0;
+}
+.imagen{
+    margin: 0;
+    padding: 0;
+    height: auto;
+
+}
+.img-desktop{
+    display:none;
+}
+
+/* Estilos de los textos -m*/
+.textos{
+    background-color: var(--colorFondoTextos);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0rem 1.4rem 1.4rem 1.4rem;
+    margin: 0;
+}
+.texto-arriba{
+    letter-spacing: 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 500;
+    margin: 1.4rem 0rem 0.5rem 0rem;
+}
+.titulo-producto, .precio-grande{
+    font-family: 'Fraunces', serif;
+}
+.titulo-producto{
+    font-size: 2rem;
+    color: var(--colorTextoTitulo);
+}
+
+.desc{
+    margin-top: 1rem;
+}
+.text-desc{
+    width: 100%;
+    /* font-size: 14px; */
+    line-height: 1.5rem;
+}
+.texto-arriba, .text-desc{
+    color: var(--colorTextoDescripcion);
+}
+
+.precios{
+    margin-top: 1.3rem;
+    /* border:1px solid red; */
+    display: flex;
+    align-items: center;
+}
+.precio-grande{
+    font-size: 1.35rem;
+    color: var(--colorEnfasis);
+}
+.precio-tachado{
+    margin-left: 1rem;
+    text-decoration: line-through;
+    color: var(--colorTextoDescripcion);
+    font-size: 0.7rem;
+}
+.contenedor-btn{
+    margin-top: 1rem;
+    display: flex;
+    /* border: 1px solid red; */
+}
+.btn-principal{
+    flex:1;
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--colorEnfasis);
+    background-color: var(--colorEnfasis);
+    color:var(--colorFondoTextos);
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap:0.7rem;
+}
+/* estilos para desktop */
+@media screen and (min-width:1024px){
+    .tarjeta{
+        display: flex;
+        flex-direction: row;
+        width: 40rem;
+        height: 27rem;
+    }
+    .img-mobile{
+        display: none;
+    }
+    .img-desktop{
+        width: 100%;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        flex: 1;
+        display: block;
+    }
+    .contenedor{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .textos{
+        padding: 2rem 2rem;
+        flex:0.9;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        cursor: pointer;
+    }
+    .texto-arriba{
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+    .titulo-producto{
+        font-weight: 700;
+        line-height: 2rem;
+        /* border:1px solid red; */
+        padding: 0px 2rem 0px 0px;
+    }
+    .text-desc{
+        /* border: 1px solid red; */
+        padding: 0 2rem 0 0;
+    }
+    .btn-principal{
+        padding: 1rem;
+    }
+
+}
